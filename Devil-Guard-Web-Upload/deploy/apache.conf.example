@@ -1,0 +1,13 @@
+<VirtualHost *:443>
+    ServerName guard.example.com
+    DocumentRoot /var/www/Devil-Guard-Web-Upload
+
+    <Directory /var/www/Devil-Guard-Web-Upload>
+        AllowOverride All
+        Require all granted
+        Options -Indexes
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/devil-guard-error.log
+    CustomLog ${APACHE_LOG_DIR}/devil-guard-access.log combined
+</VirtualHost>

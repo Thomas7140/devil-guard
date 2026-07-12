@@ -1,0 +1,13 @@
+Devil-Guard device identity
+
+The legacy hardware fingerprint combined motherboard, CPU, network, disk, operating-system,
+memory, video, BIOS, USB, and audio identifiers. That design collected more device information
+than is necessary and has been removed.
+
+The .NET 10 migration uses a random per-installation identifier stored under:
+
+    HKEY_CURRENT_USER\Software\DevilGuard\InstallId
+
+The identifier is generated locally on first use and is hashed before being returned by the Core
+library. It does not contain raw hardware serial numbers. Removing the DevilGuard registry folder
+resets the installation identifier.

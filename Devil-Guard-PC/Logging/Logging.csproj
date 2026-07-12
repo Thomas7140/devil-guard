@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>DevilGuard.Logging</AssemblyName>
+    <RootNamespace>DevilGuard.Logging</RootNamespace>
+    <Product>Devil-Guard Logging</Product>
+    <Description>Thread-safe application logging for Devil-Guard.</Description>
+  </PropertyGroup>
+</Project>

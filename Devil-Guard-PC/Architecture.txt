@@ -1,0 +1,31 @@
+Devil-Guard solution architecture
+
+Core
+    Shared Windows integration, cryptography, process inspection, registry, WMI, image handling,
+    and Delta Force: Black Hawk Down integration. The current game integration is x86-only.
+
+Logging
+    Thread-safe in-memory logging and local file logging used by desktop apps and the service.
+
+Sentry
+    End-user WPF desktop client. Shows runtime and supported-game status and provides local logs.
+
+Overseer
+    WPF administration console for Sentinel service status and local game-integration status.
+
+Setup
+    WPF maintenance application that launches elevated PowerShell scripts to install or remove
+    the Sentinel Windows service.
+
+Sentinel
+    Windows service host with console diagnostic mode and periodic health logging.
+
+Patcher
+    HTTPS-only update staging utility. Downloads a package, verifies its SHA-256 digest, and does
+    not execute it automatically.
+
+Style
+    Shared WPF colours and button styling.
+
+WebService
+    HTTPS JSON client utilities based on HttpClient and System.Text.Json.

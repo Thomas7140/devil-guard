@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ywMuGuelMF8=",
+  "success": true,
+  "projectFilePath": "G:\\anti cheat\\Devil-guard\\Devil-guard-server\\DevilGuard.Gatekeeper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.57\\microsoft.windows.sdk.net.ref.10.0.17763.57.nupkg.sha512"
+  ],
+  "logs": []
+}

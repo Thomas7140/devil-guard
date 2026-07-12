@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>DevilGuard.Patcher</AssemblyName>
+    <RootNamespace>DevilGuard.Patcher</RootNamespace>
+    <Product>Devil-Guard Patcher</Product>
+    <Description>HTTPS and SHA-256 verified update staging utility for Devil-Guard.</Description>
+    <ApplicationManifest>..\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="update-manifest.example.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>DevilGuard.Sentry</AssemblyName>
+    <RootNamespace>DevilGuard.Sentry</RootNamespace>
+    <Product>Devil-Guard Sentry</Product>
+    <Description>Devil-Guard desktop anti-cheat client.</Description>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>devil-guard.ico</ApplicationIcon>
+    <ApplicationManifest>..\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\Logging.csproj" />
+    <ProjectReference Include="..\Style\Style.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\WebService\WebService.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="devil-guard.ico" />
+  </ItemGroup>
+</Project>

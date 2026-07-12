@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>DevilGuard.Overseer</AssemblyName>
+    <RootNamespace>DevilGuard.Overseer</RootNamespace>
+    <Product>Devil-Guard Overseer</Product>
+    <Description>Devil-Guard administration desktop application.</Description>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>devil-guard.ico</ApplicationIcon>
+    <ApplicationManifest>..\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Logging\Logging.csproj" />
+    <ProjectReference Include="..\Style\Style.csproj" />
+    <ProjectReference Include="..\WebService\WebService.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="devil-guard.ico" />
+  </ItemGroup>
+</Project>

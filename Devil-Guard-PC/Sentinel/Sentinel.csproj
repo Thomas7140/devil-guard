@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>DevilGuard.Sentinel</AssemblyName>
+    <RootNamespace>DevilGuard.Sentinel</RootNamespace>
+    <Product>Devil-Guard Sentinel</Product>
+    <Description>Windows service host for Devil-Guard.</Description>
+    <ApplicationManifest>..\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Logging\Logging.csproj" />
+    <ProjectReference Include="..\WebService\WebService.csproj" />
+  </ItemGroup>
+</Project>

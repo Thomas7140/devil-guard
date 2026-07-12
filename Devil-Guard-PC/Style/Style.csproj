@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>DevilGuard.Style</AssemblyName>
+    <RootNamespace>DevilGuard.Style</RootNamespace>
+    <Product>Devil-Guard Style</Product>
+    <Description>Shared WPF resources for Devil-Guard.</Description>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,10 @@
+Devil-Guard roadmap
+
+- Add automated unit and Windows integration tests.
+- Define a versioned HTTPS API contract and strong authentication flow.
+- Add signed update manifests and Authenticode package verification.
+- Verify game-memory offsets against approved executable hashes before enabling game actions.
+- Add explicit user consent, retention controls, and privacy documentation for telemetry.
+- Add CI builds for .NET 10 win-x86 and signed release artefacts.
+- Add service recovery, structured logging, and health reporting to Overseer.
+- Replace placeholder status views with authenticated operational workflows after the server API exists.

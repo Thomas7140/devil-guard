@@ -1,0 +1,39 @@
+server {
+    listen 443 ssl http2;
+    server_name guard.example.com;
+    root /var/www/Devil-Guard-Web-Upload;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ ^/api/attestation/?(.*)$ {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root/api/index.php;
+        fastcgi_param QUERY_STRING route=attestation/$1&$query_string;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+    }
+
+    location ~ ^/api/v1/?(.*)$ {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root/api/index.php;
+        fastcgi_param QUERY_STRING route=$1&$query_string;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+    }
+
+    location = /assets/uid.php { deny all; }
+    location ~ ^/(src|config|database|scripts|storage|deploy)(/|$) { deny all; }
+    location ~ /(?:README(?:\.md)?|UPLOAD-INSTRUCTIONS\.txt|SCAN-REPORT\.txt|\.gitignore)$ { deny all; }
+    location ~ /\. { deny all; }
+    location ~* \.(?:env|ini|log|sql|bak|dist|example|md)$ { deny all; }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+    }
+
+    client_max_body_size 1m;
+}

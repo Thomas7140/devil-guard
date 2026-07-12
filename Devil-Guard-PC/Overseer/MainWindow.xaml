@@ -1,0 +1,55 @@
+<Window x:Class="DevilGuard.Overseer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Devil-Guard Overseer" Height="460" Width="760"
+        MinHeight="420" MinWidth="680"
+        WindowStartupLocation="CenterScreen"
+        Background="#111820" Foreground="#FFF8E7"
+        Icon="devil-guard.ico"
+        Loaded="Window_Loaded">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="DEVIL-GUARD OVERSEER" FontSize="26" FontWeight="Bold" Foreground="#FFD449"/>
+            <TextBlock Text="Local administration and service status" Opacity="0.85"/>
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="18"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Background="#1C2833" BorderBrush="#DBA900" BorderThickness="1" CornerRadius="8" Padding="18">
+                <StackPanel>
+                    <TextBlock Text="Sentinel service" FontSize="18" FontWeight="SemiBold"/>
+                    <TextBlock x:Name="ServiceStatusText" Margin="0,14,0,0" FontSize="16" Foreground="#FFD449"/>
+                    <TextBlock x:Name="ServiceDetailText" Margin="0,8,0,0" TextWrapping="Wrap" Opacity="0.8"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="2" Background="#1C2833" BorderBrush="#DBA900" BorderThickness="1" CornerRadius="8" Padding="18">
+                <StackPanel>
+                    <TextBlock Text="Game integration" FontSize="18" FontWeight="SemiBold"/>
+                    <TextBlock x:Name="GameStatusText" Margin="0,14,0,0" FontSize="16" Foreground="#FFD449"/>
+                    <TextBlock Text="Supported process names: dfbhd.exe and dfbhdlc.exe" Margin="0,8,0,0" TextWrapping="Wrap" Opacity="0.8"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <DockPanel Grid.Row="4" LastChildFill="False">
+            <TextBlock x:Name="RefreshTimeText" DockPanel.Dock="Left" VerticalAlignment="Center" Opacity="0.7"/>
+            <Button DockPanel.Dock="Right" Content="Close" Width="90" Margin="10,0,0,0" Padding="10,6" Click="Close_Click"/>
+            <Button DockPanel.Dock="Right" Content="Open logs" Width="100" Margin="10,0,0,0" Padding="10,6" Click="OpenLogs_Click"/>
+            <Button DockPanel.Dock="Right" Content="Refresh" Width="90" Padding="10,6" Click="Refresh_Click"/>
+        </DockPanel>
+    </Grid>
+</Window>

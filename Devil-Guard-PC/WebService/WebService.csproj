@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>DevilGuard.WebService</AssemblyName>
+    <RootNamespace>DevilGuard.WebService</RootNamespace>
+    <Product>Devil-Guard Web Service Client</Product>
+    <Description>HTTPS JSON client services for Devil-Guard.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\Logging.csproj" />
+  </ItemGroup>
+</Project>
